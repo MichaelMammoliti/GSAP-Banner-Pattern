@@ -1,20 +1,20 @@
 /*
 	Script info:
 	================
-	// - Author: Michael Mammoliti
-	// - Version: 1.0.0
-	// - Release date: 06 November 2016
-	// - GitHub: https://github.com/MichaelMammoliti/Preloader.js/
+	- Author: Michael Mammoliti
+	- Version: 1.0.0
+	- Release date: 06 November 2016
+	- GitHub: https://github.com/MichaelMammoliti/GSAP-Banner-Pattern/
 
 	Contact info
 	================
-	// - GitHub: https://github.com/MichaelMammoliti
-	// - Mail: mammoliti.michael@gmail.com
-	// - Twitter: @MichMammoliti
+	- GitHub: https://github.com/MichaelMammoliti
+	- Mail: mammoliti.michael@gmail.com
+	- Twitter: @MichMammoliti
 
 	License Info
 	================
-	// - Released under the MIT license.
+	- Released under the MIT license.
 */
 
 // Banner module
