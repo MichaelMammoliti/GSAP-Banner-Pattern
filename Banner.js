@@ -1,276 +1,276 @@
 /*
-	Script info:
-	================
-	- Author: Michael Mammoliti
-	- Version: 1.0.0
-	- Release date: 06 November 2016
-	- GitHub: https://github.com/MichaelMammoliti/GSAP-Banner-Pattern/
+  Script info:
+  ================
+  - Author: Michael Mammoliti
+  - Version: 1.0.0
+  - Release date: 06 November 2016
+  - GitHub: https://github.com/MichaelMammoliti/GSAP-Banner-Pattern/
 
-	Contact info
-	================
-	- GitHub: https://github.com/MichaelMammoliti
-	- Mail: mammoliti.michael@gmail.com
-	- Twitter: @MichMammoliti
+  Contact info
+  ================
+  - GitHub: https://github.com/MichaelMammoliti
+  - Mail: mammoliti.michael@gmail.com
+  - Twitter: @MichMammoliti
 
-	License Info
-	================
-	- Released under the MIT license.
+  License Info
+  ================
+  - Released under the MIT license.
 */
 
 // Banner module
 var Banner = (function(){
 
-	// Collapsed Unit
-	// ====================
-	var CollapsedUnit = (function()
-	{
+  // Collapsed Unit
+  // ====================
+  var CollapsedUnit = (function()
+  {
 
-				// Declare variables
-				// ========================
-		var defDuration = 1,
-				frameDelay 	= 2,
-
-				// Elements
-				// ========================
-				el = "#some-element-id"
-		;
+        // Declare variables
+        // ========================
+    var defDuration = 1,
+        frameDelay  = 2,
+
+        // Elements
+        // ========================
+        el = "#some-element-id"
+    ;
 
-		// Timelines
-		// ========================
-		var timelines = {
-			master: new TimelineMax({ paused : true }),
-			loader: new TimelineMax({ paused : true })
-		};
+    // Timelines
+    // ========================
+    var timelines = {
+      master: new TimelineMax({ paused : true }),
+      loader: new TimelineMax({ paused : true })
+    };
 
 
-		// Callbacks
-		// ========================
-		var callbacks = {
-			master: {
-				callbackName: function(){}
-			},
-			loader: {
-				callbackName: function(){}
-			}
-		};
+    // Callbacks
+    // ========================
+    var callbacks = {
+      master: {
+        callbackName: function(){}
+      },
+      loader: {
+        callbackName: function(){}
+      }
+    };
 
 
-		// Frames
-		// ========================
-		var frames = {
+    // Frames
+    // ========================
+    var frames = {
 
-			master: {
-				set: function()
-				{
-					var tl = new TimelineMax();
+      master: {
+        set: function()
+        {
+          var tl = new TimelineMax();
 
-					tl
-						.set([], {})
-					;
-
-					return tl;
-				},
-
-				frame1: function()
-				{
-					var tl = new TimelineMax();
-
-					tl
-						.to({}, defDuration, {})
-					;
-
-					return tl;
-				}
-
-			},
-
-			loader: {
-				fadeOut: function()
-				{
-					var tl = new TimelineMax();
+          tl
+            .set([], {})
+          ;
+
+          return tl;
+        },
+
+        frame1: function()
+        {
+          var tl = new TimelineMax();
+
+          tl
+            .to({}, defDuration, {})
+          ;
+
+          return tl;
+        }
+
+      },
+
+      loader: {
+        fadeOut: function()
+        {
+          var tl = new TimelineMax();
 
-					tl
-						.to({}, defDuration, {})
-					;
+          tl
+            .to({}, defDuration, {})
+          ;
 
-					return tl;
-				}
-			}
+          return tl;
+        }
+      }
 
-		}
+    }
 
 
-		// Initialize Banner
-		// ========================
-		function init()
-		{
+    // Initialize Banner
+    // ========================
+    function init()
+    {
 
-			// Initialize third parties components
-			// ============================
+      // Initialize third parties components
+      // ============================
 
-			// Add frames to timeline
-			// ============================
-			timelines.loader
-				.add( frames.loader.fadeOut(), "fadeout" )
-			;
+      // Add frames to timeline
+      // ============================
+      timelines.loader
+        .add( frames.loader.fadeOut(), "fadeout" )
+      ;
 
-			timelines.master
-				.add( frames.master.set(), "set" )
-				.add( frames.master.frame1(), "frame1" )
-			;
+      timelines.master
+        .add( frames.master.set(), "set" )
+        .add( frames.master.frame1(), "frame1" )
+      ;
 
-			// File Preloader
-			// ============================
+      // File Preloader
+      // ============================
 
-		}
+    }
 
 
-		// Return module
-		// ========================
-		return {
-			init: init,
-			timelines : timelines
-		};
+    // Return module
+    // ========================
+    return {
+      init: init,
+      timelines : timelines
+    };
 
 
-	}());
+  }());
 
 
-	// Expanded Unit
-	// ====================
-	var ExpandedUnit = (function()
-	{
+  // Expanded Unit
+  // ====================
+  var ExpandedUnit = (function()
+  {
 
-				// Declare variables
-				// ========================
-		var defDuration = 1,
-				frameDelay 	= 2,
+        // Declare variables
+        // ========================
+    var defDuration = 1,
+        frameDelay  = 2,
 
-				// Elements
-				// ========================
-				el = "#some-element-id"
-		;
+        // Elements
+        // ========================
+        el = "#some-element-id"
+    ;
 
-		// Timelines
-		// ========================
-		var timelines = {
-			master: new TimelineMax({ paused : true }),
-			loader: new TimelineMax({ paused : true })
-		};
+    // Timelines
+    // ========================
+    var timelines = {
+      master: new TimelineMax({ paused : true }),
+      loader: new TimelineMax({ paused : true })
+    };
 
 
-		// Callbacks
-		// ========================
-		var callbacks = {
-			master: {
-				callbackName: function(){}
-			},
-			loader: {
-				callbackName: function(){}
-			}
-		};
+    // Callbacks
+    // ========================
+    var callbacks = {
+      master: {
+        callbackName: function(){}
+      },
+      loader: {
+        callbackName: function(){}
+      }
+    };
 
 
-		// Frames
-		// ========================
-		var frames = {
+    // Frames
+    // ========================
+    var frames = {
 
-			master: {
-				set: function()
-				{
-					var tl = new TimelineMax();
+      master: {
+        set: function()
+        {
+          var tl = new TimelineMax();
 
-					tl
-						.set([], {})
-					;
+          tl
+            .set([], {})
+          ;
 
-					return tl;
-				},
+          return tl;
+        },
 
-				frame1: function()
-				{
-					var tl = new TimelineMax();
+        frame1: function()
+        {
+          var tl = new TimelineMax();
 
-					tl
-						.to({}, defDuration, {})
-					;
+          tl
+            .to({}, defDuration, {})
+          ;
 
-					return tl;
-				}
+          return tl;
+        }
 
-			},
+      },
 
-			loader: {
-				fadeOut: function()
-				{
-					var tl = new TimelineMax();
+      loader: {
+        fadeOut: function()
+        {
+          var tl = new TimelineMax();
 
-					tl
-						.to({}, defDuration, {})
-					;
+          tl
+            .to({}, defDuration, {})
+          ;
 
-					return tl;
-				}
-			}
+          return tl;
+        }
+      }
 
-		}
+    }
 
 
-		// Initialize Banner
-		// ========================
-		function init()
-		{
+    // Initialize Banner
+    // ========================
+    function init()
+    {
 
-			// Initialize third parties components
-			// ============================
+      // Initialize third parties components
+      // ============================
 
-			// Add frames to timeline
-			// ============================
-			timelines.loader
-				.add( frames.loader.fadeOut(), "fadeout" )
-			;
+      // Add frames to timeline
+      // ============================
+      timelines.loader
+        .add( frames.loader.fadeOut(), "fadeout" )
+      ;
 
-			timelines.master
-				.add( frames.master.set(), "set" )
-				.add( frames.master.frame1(), "frame1" )
-			;
+      timelines.master
+        .add( frames.master.set(), "set" )
+        .add( frames.master.frame1(), "frame1" )
+      ;
 
-			// File Preloader
-			// ============================
+      // File Preloader
+      // ============================
 
-		}
+    }
 
 
-		// Return module
-		// ========================
-		return {
-			init: init,
-			timelines : timelines
-		};
+    // Return module
+    // ========================
+    return {
+      init: init,
+      timelines : timelines
+    };
 
 
-	}());
+  }());
 
 
-	// Return module
-	// ====================
-	return {
+  // Return module
+  // ====================
+  return {
 
-		// Collapsed unit
-		// ====================
-		collapsed: {
-			init: CollapsedUnit.init,
-			timelines : CollapsedUnit.timelines
-		},
+    // Collapsed unit
+    // ====================
+    collapsed: {
+      init: CollapsedUnit.init,
+      timelines : CollapsedUnit.timelines
+    },
 
-		// Expanded unit
-		// ====================
-		expanded: {
-			init: ExpandedUnit.init,
-			timelines : ExpandedUnit.timelines
-		}
+    // Expanded unit
+    // ====================
+    expanded: {
+      init: ExpandedUnit.init,
+      timelines : ExpandedUnit.timelines
+    }
 
-	};
+  };
 
 })();
 
